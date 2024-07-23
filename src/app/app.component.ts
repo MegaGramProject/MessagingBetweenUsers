@@ -1,13 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LeftSidebarComponent } from '../components/leftSidebar.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LeftSidebarComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: '../styles.css'
 })
 export class AppComponent {
-  title = 'messagingBetweenUsers';
+  title:string = 'Angular app';
 }
